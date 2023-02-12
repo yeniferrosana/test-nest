@@ -21,7 +21,7 @@ const router = createRouter({
       path: "/detail",
       name: "detail",
       component: () => import(""),
-    }
+    },
   ],
 });
 
