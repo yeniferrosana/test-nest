@@ -9,5 +9,5 @@ defineProps({
 </script>
 
 <template>
-  <component is="tag"><slot></slot></component>
+  <component :is="tag"><slot></slot></component>
 </template>
