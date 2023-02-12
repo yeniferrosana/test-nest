@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: "/detail",
       name: "detail",
-      component: () => import(""),
+      component: () => import("../views/CFDetailView.vue"),
     },
   ],
 });
