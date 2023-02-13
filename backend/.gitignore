@@ -2,7 +2,7 @@
 /dist
 /node_modules
 .env
-backend/.env
+prueba.ts
 
 # Logs
 logs
