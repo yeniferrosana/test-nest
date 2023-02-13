@@ -9,8 +9,8 @@
   
 </script>
 <template>
-  <footer class="bg-primary-250">
-    <hr class="h-12 border-primary-100">
+  <footer class="bg-secondary-color-300">
+    <hr class="h-12 border-primary-color-200">
     <div class="container px-5 py-10 mx-auto max-w-6xl">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
         <div class="flex lg:justify-start sm:justify-start justify-center ">
@@ -18,14 +18,14 @@
         </div>
         <div>
             <div class="flex flex-col lg:items-start sm:items-start items-center mt-5">
-              <a href="projects" class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-200 md:mx-4 md:my-2">Proyectos</a>
-              <a href="who" class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-200 md:mx-4 md:my-2">¿Quiénes somos?</a>
-              <a href="help" class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-200 md:mx-4 md:my-2">Ayuda</a>
-              <a href="login" class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-200 md:mx-4 md:my-2">Iniciar Sesión</a>
-              <a href="contact" class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-200 md:mx-4 md:my-2">Contacto</a>
+              <a href="projects" class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2">Proyectos</a>
+              <a href="who" class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2">¿Quiénes somos?</a>
+              <a href="help" class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2">Ayuda</a>
+              <a href="login" class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2">Iniciar Sesión</a>
+              <a href="contact" class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2">Contacto</a>
             </div>
             <div class="flex mt-5 mx-2 lg:justify-start sm:justify-start justify-center">
-                <a href="#" class="mx-2 text-primary-50 transition-colors duration-300 hover:text-primary-200 " aria-label="Reddit">
+                <a href="#" class="mx-2 text-primary-color transition-colors duration-300 hover:text-secondary-color " aria-label="Reddit">
                   <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -34,7 +34,7 @@
                   </svg>
                 </a>
 
-                <a href="#" class="mx-2 text-primary-50 transition-colors duration-300 hover:text-primary-200" aria-label="Facebook">
+                <a href="#" class="mx-2 text-primary-color transition-colors duration-300 hover:text-secondary-color" aria-label="Facebook">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -43,7 +43,7 @@
                     </svg>
                 </a>
 
-                <a href="#" class="mx-2 text-primary-50 transition-colors duration-300 hover:text-primary-200" aria-label="Github">
+                <a href="#" class="mx-2 text-primary-color transition-colors duration-300 hover:text-secondary-color" aria-label="Github">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -55,8 +55,8 @@
         </div>
       </div>
     </div>
-    <div class="bg-primary-350">
-      <p class="text-center text-primary-50">©2023 Donafunding - Todos los derechos reservados.</p>
+    <div class="bg-secondary-color-200">
+      <p class="text-center text-primary-color">©2023 Donafunding - Todos los derechos reservados.</p>
     </div>
   </footer>
 </template>

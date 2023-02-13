@@ -1,35 +1,9 @@
-# frontend
+### Documentacion del proyecto
 
-This template should help get you started developing with Vue 3 in Vite.
+Primero clonar el proyecto
 
-## Recommended IDE Setup
+Para la creación de componentes se deberá esta nomenclatura:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+`Crear el archivo CWHeader.vue`
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Donde `CF viene de Crowfunding` solo para tener una convención en nuestros componentes

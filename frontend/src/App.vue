@@ -5,6 +5,6 @@ import FooterVue from "../src/components/shared/Footer.vue";
 
 <template>
   <NavBarVue />
-  <RouterView class="bg-primary-200" />
+  <RouterView class="bg-secondary-color" />
   <FooterVue />
 </template>
