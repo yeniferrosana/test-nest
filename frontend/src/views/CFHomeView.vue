@@ -13,6 +13,9 @@
 <style scoped>
   .pattern {
      background-image:url(https://res.cloudinary.com/yeniferramirez11/image/upload/v1676310397/diego-ph-SZYreZsJ-fE-unsplash_1_pb4dh4.png);
+       position: relative;
+  border-bottom-left-radius: 50% 49%;
+  border-bottom-right-radius: 50% 36%;
   }
 </style>
 
