@@ -2,7 +2,9 @@
 import CFBaseButton from "../Buttons/CFBaseButton.vue";
 </script>
 <template>
-  <div class="bg-white grid grid-cols-2 grid-rows- h-[500px] shadow-lg rounded-lg p-5">
+  <div
+    class="bg-white grid grid-cols-2 grid-rows- h-[500px] shadow-lg rounded-lg p-5"
+  >
     <div class="">
       <img
         class="block w-full h-full object-cover rounded-lg"
