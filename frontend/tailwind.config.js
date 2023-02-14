@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      Montserrat: ["Montserrat", "sans-serif"],
+      Roboto: ["Roboto", "sans-serif"],
+    },
     extend: {
       colors: {
         "primary-color": "#353531",
