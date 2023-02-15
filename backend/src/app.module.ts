@@ -18,6 +18,6 @@ import { JoiValidationSchema } from './config/joi.validation';
 })
 export class AppModule {
   constructor() {
-    console.log(process.env);
+    console.log('Running in port: ' + process.env.PORT);
   }
 }
