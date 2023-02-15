@@ -27,6 +27,16 @@ const router = createRouter({
       name: "projects",
       component: () => import("../views/CFProjectsView.vue"),
     },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/CFLoginView.vue"),
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: () => import("../views/CFRegisterView.vue"),
+    },
   ],
 });
 
