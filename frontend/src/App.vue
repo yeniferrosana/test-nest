@@ -1,24 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import NavBarVue from "../src/components/shared/Navbar.vue";
+import FooterVue from "../src/components/shared/Footer.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <NavBarVue />
+  <RouterView class="bg-secondary-color" />
+  <FooterVue />
 </template>
