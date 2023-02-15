@@ -1,5 +1,5 @@
 <template>
-  <div class="bar-container relative h-20">
+  <div class="bar-container relative h-[70px]">
     <div ref="data" class="items-move absolute flex flex-col items-center">
       <div
         class="flag bg-gray-color font-semibold text-sm px-1 py-[2px] mb-3 relative rounded-[4px]"
@@ -30,7 +30,7 @@ export default {
     progress: {
       type: Number,
       required: true,
-      default: 500,
+      default: 800,
     },
   },
   mounted() {
@@ -49,6 +49,7 @@ export default {
   height: 10px;
   border-radius: 5px;
   bottom: 0;
+  max-width: 100%;
 }
 
 .items-move {
