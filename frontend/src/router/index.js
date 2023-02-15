@@ -22,6 +22,11 @@ const router = createRouter({
       name: "detail",
       component: () => import("../views/CFDetailView.vue"),
     },
+    {
+      path: "/projects",
+      name: "projects",
+      component: () => import("../views/CFProjectsView.vue"),
+    },
   ],
 });
 
