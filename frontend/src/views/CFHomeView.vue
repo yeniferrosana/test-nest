@@ -1,11 +1,21 @@
 <script>
   import SampleForm from '../components/shared/SampleForm.vue'
-  import CFCard from '../components/Cards/CFDetailCard.vue'
+  import CFCard from '../components/Cards/CFProjectCard.vue'
+  import ProgressBar from "@/components/shared/ProgressBar.vue";
+  import json from "@/api.json";
+  import CFBaseButton from "../components/Buttons/CFBaseButton.vue";
 
   export default {
+    data() {
+      return {
+        projects: json,
+      };
+    },
     components: {
       SampleForm,
       CFCard,
+      ProgressBar,
+      CFBaseButton
     }
   }
 </script>
@@ -86,14 +96,39 @@
     <section id="projects">
       <div class="container px-5 py-24 mx-auto max-w-6xl">
         <div class="flex flex-wrap -m-4 text-center">
-          <div class="p-4 lg:w-1/3 w-full">
-            <CFCard />
-          </div>
-          <div class="p-4 lg:w-1/3 w-full">
-            <p>Componente Card</p>
-          </div>
-          <div class="p-4 lg:w-1/3 w-full">
-            <p>Componente Card</p>
+          <div 
+            v-for="item in projects.slice(0, 3)"
+            :key="item.title"
+            class="p-4 lg:w-1/3 w-full"
+          >
+            <CFCard>
+              <template v-slot:img>
+                <img :src="item.image" alt="" />
+              </template>
+              <template v-slot:title>
+                <h2>{{ item.title }}</h2>
+              </template>
+              <template v-slot:subtitle>
+                <h3>
+                  {{
+                    item.type === "inversion"
+                      ? "Invertí y recibí intereses"
+                      : "Doná y ayuda con la causa"
+                  }}
+                </h3>
+              </template>
+              <template v-slot:description>
+                <p>{{ item.description }}</p>
+              </template>
+              <template v-slot:footer>
+                <ProgressBar :limit="item.meta" :progress="item.collected" />
+                <div class="">
+                  <CFBaseButton>
+                    <template><p>hola</p></template>
+                  </CFBaseButton>
+                </div>
+              </template>
+            </CFCard>
           </div>
         </div>
         <div class="w-full text-center">
