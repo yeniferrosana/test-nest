@@ -21,11 +21,8 @@
 </template>
 
 <script>
-import ProgressBar from "../shared/ProgressBar.vue";
-
 export default {
   name: "CFProjectCard",
-  components: { ProgressBar },
 };
 </script>
 
