@@ -5,35 +5,36 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column('text')
+  @Column('text', {
+    nullable: false,
+  })
   first_name: string;
 
-  @Column('text')
+  @Column('text', {
+    nullable: false,
+  })
   last_name: string;
 
   @Column('text', {
     unique: true,
+    nullable: false,
   })
   user_name: string;
 
   @Column('text', {
     unique: true,
+    nullable: false,
   })
   email: string;
 
   @Column('text', {
     select: false,
+    nullable: false,
   })
   password: string;
 
   @Column('bool', {
-    default: true,
+    default: false,
   })
-  isActive: boolean;
-
-  @Column('text', {
-    array: true,
-    default: ['user'],
-  })
-  roles: string[];
+  isAdmin: boolean;
 }
