@@ -11,11 +11,11 @@
       }
     }
   }
-  
+
 </script>
 
 <template>
-<header class="bg-center bg-cover">
+<header class="bg-center bg-cover bg-secondary-color">
   <div class="container px-6 mx-auto max-w-6xl">
     <nav class="relative bg-transparent">
       <div class="container py-4 mx-auto md:flex md:justify-between md:items-center">
@@ -27,7 +27,7 @@
                       <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                       </svg>
-              
+
                       <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>

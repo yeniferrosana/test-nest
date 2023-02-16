@@ -1,14 +1,28 @@
 <script setup>
+import { useRouter } from "vue-router";
 import CFDetailCard from "../components/Cards/CFDetailCard.vue";
 import CFText from "../components/Text/CFText.vue";
 import arrowLeftIcon from "../assets/icons/arrow_left.svg";
+
+const router = useRouter();
 </script>
 <template>
   <div class="bg-secondary-color p-5">
-    <img :src="arrowLeftIcon" alt="" />
-    <CFText class="font-Montserrat font-bold text-xl" tag="h3"
-      >Proyecto Don Tata</CFText
+    <div
+      class="lg:w-[1060px] m-auto md:w-[80%] sm:w-full mx-auto relative my-10"
     >
-    <CFDetailCard class="w-[1000px] m-auto" />
+      <CFText
+        class="font-Montserrat font-bold text-xl pl-10 text-center"
+        tag="h3"
+        >Proyecto Don Tata</CFText
+      >
+      <img
+        class="absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer"
+        :src="arrowLeftIcon"
+        @click="router.go(-1)"
+        alt=""
+      />
+    </div>
+    <CFDetailCard class="lg:w-[1060px] m-auto md:w-[80%] sm:w-full mb-36" />
   </div>
 </template>
