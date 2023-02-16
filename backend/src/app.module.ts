@@ -8,6 +8,7 @@ import { EnvConfiguration } from './config/app.config';
 import { JoiValidationSchema } from './config/joi.validation';
 import { AuthModule } from './auth/auth.module';
 import { OrganizationModule } from './organization/organization.module';
+import { DocumentationModule } from './documentation/documentation.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { OrganizationModule } from './organization/organization.module';
     }),
     AuthModule,
     OrganizationModule,
+    DocumentationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
