@@ -29,6 +29,12 @@
             idea que tengas y que los usuarios inviertan en tu negocio !
           </p>
         </template>
+        <template v-slot:footer>
+          <CFBaseButton
+            class="bg-secondary-color-500 absolute bottom-5 px-3 py-1 rounded-3xl font-medium text-lg"
+            >Agrega tu proyecto</CFBaseButton
+          >
+        </template>
       </CFProjectCard>
       <!-- loop projects-->
       <CFProjectCard v-for="item in projects" :key="item.title">
@@ -52,9 +58,14 @@
         </template>
         <template v-slot:footer>
           <ProgressBar :limit="item.meta" :progress="item.collected" />
-          <div class="">
-            <CFBaseButton>
-              <template><p>hola</p></template>
+          <div class="absolute bottom-5">
+            <CFBaseButton
+              class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+              >Donar
+            </CFBaseButton>
+            <CFBaseButton
+              class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+              >Ver más
             </CFBaseButton>
           </div>
         </template>

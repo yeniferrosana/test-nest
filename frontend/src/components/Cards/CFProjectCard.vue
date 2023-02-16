@@ -1,5 +1,7 @@
 <template>
-  <div class="w-[386px] h-[561px] bg-white p-5 rounded-lg overflow-hidden">
+  <div
+    class="w-[386px] h-[561px] bg-white p-5 rounded-lg overflow-hidden relative"
+  >
     <div class="w-[346px] rounded-lg overflow-hidden">
       <slot name="img"></slot>
     </div>
@@ -14,7 +16,7 @@
         <slot name="description"></slot>
       </div>
     </div>
-    <footer>
+    <footer class="h-36">
       <slot name="footer"></slot>
     </footer>
   </div>
