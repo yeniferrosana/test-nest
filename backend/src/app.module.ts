@@ -11,6 +11,7 @@ import { OrganizationModule } from './organization/organization.module';
 import { DocumentationModule } from './documentation/documentation.module';
 import { ProjectModule } from './project/project.module';
 import { BlogModule } from './blog/blog.module';
+import { BankAccountModule } from './bank-account/bank-account.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { BlogModule } from './blog/blog.module';
     DocumentationModule,
     ProjectModule,
     BlogModule,
+    BankAccountModule,
   ],
   controllers: [AppController],
   providers: [AppService],
