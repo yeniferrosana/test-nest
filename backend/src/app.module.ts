@@ -13,6 +13,7 @@ import { ProjectModule } from './project/project.module';
 import { BlogModule } from './blog/blog.module';
 import { BankAccountModule } from './bank-account/bank-account.module';
 import { PaymentLinkModule } from './payment-link/payment-link.module';
+import { CommentModule } from './comment/comment.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { PaymentLinkModule } from './payment-link/payment-link.module';
     BlogModule,
     BankAccountModule,
     PaymentLinkModule,
+    CommentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

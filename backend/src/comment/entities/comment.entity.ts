@@ -1,29 +1,19 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('blogs')
-export class Blog {
+@Entity('comments')
+export class Comment {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column('text', {
     nullable: false,
   })
-  title: string;
+  user_name: string;
 
   @Column('text', {
     nullable: false,
   })
-  resume: string;
-
-  @Column('text', {
-    nullable: false,
-  })
-  description: string;
-
-  @Column('text', {
-    nullable: false,
-  })
-  img: string;
+  message: string;
 
   @Column('timestamp', {
     default: () => 'CURRENT_TIMESTAMP(6)',

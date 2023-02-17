@@ -38,5 +38,5 @@ export class Project {
   @Column('timestamp', {
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
-  createdAt: Date;
+  created_at: Date;
 }
