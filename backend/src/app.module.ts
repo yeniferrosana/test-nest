@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { OrganizationModule } from './organization/organization.module';
 import { DocumentationModule } from './documentation/documentation.module';
 import { ProjectModule } from './project/project.module';
+import { BlogModule } from './blog/blog.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { ProjectModule } from './project/project.module';
     OrganizationModule,
     DocumentationModule,
     ProjectModule,
+    BlogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
