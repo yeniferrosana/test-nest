@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Documentation } from 'src/documentation/entities/documentation.entity';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+} from 'typeorm';
 
 @Entity('organizations')
 export class Organization {
@@ -20,4 +27,8 @@ export class Organization {
     default: false,
   })
   registered: boolean;
+
+  @OneToOne(() => Documentation, (documentation) => documentation.organization) // specify inverse side as a second parameter
+  @JoinColumn()
+  documentation: Documentation;
 }

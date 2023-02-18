@@ -1,4 +1,5 @@
 import { User } from 'src/auth/entities/user.entity';
+import { Organization } from 'src/organization/entities/organization.entity';
 import {
   Entity,
   Column,
@@ -32,4 +33,7 @@ export class Documentation {
   @OneToOne(() => User)
   @JoinColumn()
   admin: User;
+
+  @OneToOne(() => Organization, (organization) => organization.documentation) // specify inverse side as a second parameter
+  organization: Organization;
 }
