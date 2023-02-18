@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { User } from 'src/auth/entities/user.entity';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+} from 'typeorm';
 
 export enum Status {
   NONE = 'none',
@@ -21,4 +28,8 @@ export class Documentation {
     default: Status.NONE,
   })
   status: string;
+
+  @OneToOne(() => User)
+  @JoinColumn()
+  admin: User;
 }
