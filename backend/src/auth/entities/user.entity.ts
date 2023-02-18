@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Documentation } from 'src/documentation/entities/documentation.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 
 @Entity('users')
 export class User {
@@ -37,4 +38,7 @@ export class User {
     default: false,
   })
   isAdmin: boolean;
+
+  @OneToOne(() => Documentation, (documentation) => documentation.admin) // specify inverse side as a second parameter
+  documentation: Documentation;
 }

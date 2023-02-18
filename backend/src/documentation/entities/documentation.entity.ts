@@ -30,7 +30,7 @@ export class Documentation {
   })
   status: string;
 
-  @OneToOne(() => User)
+  @OneToOne(() => User, (user) => user.documentation)
   @JoinColumn()
   admin: User;
 
