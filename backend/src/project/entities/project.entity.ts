@@ -1,5 +1,6 @@
 import { BankAccount } from 'src/bank-account/entities/bank-account.entity';
 import { Blog } from 'src/blog/entities/blog.entity';
+import { Donation } from 'src/donation/entities/donation.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
 import { PaymentLink } from 'src/payment-link/entities/payment-link-entity';
 import {
@@ -61,4 +62,7 @@ export class Project {
 
   @OneToMany(() => PaymentLink, (paymentLink) => paymentLink.project)
   paymentLinks: PaymentLink[];
+
+  @OneToMany(() => Donation, (donation) => donation.project)
+  donations: Donation[];
 }

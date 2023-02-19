@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Project } from 'src/project/entities/project.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
 @Entity('donations')
 export class Donation {
@@ -25,4 +26,7 @@ export class Donation {
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
   created_at: Date;
+
+  @ManyToOne(() => Project, (project) => project.donations)
+  project: Project;
 }
