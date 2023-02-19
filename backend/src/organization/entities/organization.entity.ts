@@ -1,5 +1,6 @@
 import { User } from 'src/auth/entities/user.entity';
 import { Documentation } from 'src/documentation/entities/documentation.entity';
+import { Project } from 'src/project/entities/project.entity';
 import {
   Entity,
   Column,
@@ -7,6 +8,7 @@ import {
   OneToOne,
   JoinColumn,
   ManyToOne,
+  OneToMany,
 } from 'typeorm';
 
 @Entity('organizations')
@@ -36,4 +38,7 @@ export class Organization {
 
   @ManyToOne(() => User, (user) => user.organizations)
   owner: User;
+
+  @OneToMany(() => Project, (project) => project.organization)
+  projects: Project[];
 }
