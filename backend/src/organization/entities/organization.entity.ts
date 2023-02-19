@@ -1,3 +1,4 @@
+import { User } from 'src/auth/entities/user.entity';
 import { Documentation } from 'src/documentation/entities/documentation.entity';
 import {
   Entity,
@@ -5,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
   OneToOne,
   JoinColumn,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity('organizations')
@@ -31,4 +33,7 @@ export class Organization {
   @OneToOne(() => Documentation, (documentation) => documentation.organization) // specify inverse side as a second parameter
   @JoinColumn()
   documentation: Documentation;
+
+  @ManyToOne(() => User, (user) => user.organizations)
+  owner: User;
 }

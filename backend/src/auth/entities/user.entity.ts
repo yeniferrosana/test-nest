@@ -1,5 +1,12 @@
 import { Documentation } from 'src/documentation/entities/documentation.entity';
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
+import { Organization } from 'src/organization/entities/organization.entity';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  OneToMany,
+} from 'typeorm';
 
 @Entity('users')
 export class User {
@@ -41,4 +48,7 @@ export class User {
 
   @OneToOne(() => Documentation, (documentation) => documentation.admin) // specify inverse side as a second parameter
   documentation: Documentation;
+
+  @OneToMany(() => Organization, (organization) => organization.owner)
+  organizations: Organization[];
 }
