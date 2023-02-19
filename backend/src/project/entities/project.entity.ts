@@ -1,6 +1,7 @@
 import { BankAccount } from 'src/bank-account/entities/bank-account.entity';
 import { Blog } from 'src/blog/entities/blog.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
+import { PaymentLink } from 'src/payment-link/entities/payment-link-entity';
 import {
   Entity,
   Column,
@@ -57,4 +58,7 @@ export class Project {
 
   @OneToMany(() => BankAccount, (bankAccount) => bankAccount.project)
   bankAccounts: BankAccount[];
+
+  @OneToMany(() => PaymentLink, (paymentLink) => paymentLink.project)
+  paymentLinks: PaymentLink[];
 }
