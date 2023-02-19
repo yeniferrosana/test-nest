@@ -1,3 +1,4 @@
+import { BankAccount } from 'src/bank-account/entities/bank-account.entity';
 import { Blog } from 'src/blog/entities/blog.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
 import {
@@ -53,4 +54,7 @@ export class Project {
 
   @OneToMany(() => Blog, (blog) => blog.project)
   blogs: Blog[];
+
+  @OneToMany(() => BankAccount, (bankAccount) => bankAccount.project)
+  bankAccounts: BankAccount[];
 }

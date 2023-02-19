@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Project } from 'src/project/entities/project.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
 @Entity('bankAccounts')
 export class BankAccount {
@@ -19,4 +20,7 @@ export class BankAccount {
     nullable: false,
   })
   alias: string;
+
+  @ManyToOne(() => Project, (project) => project.bankAccounts)
+  project: Project;
 }
