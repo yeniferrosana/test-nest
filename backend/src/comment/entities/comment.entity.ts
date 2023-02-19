@@ -1,3 +1,4 @@
+import { Blog } from 'src/blog/entities/blog.entity';
 import { Project } from 'src/project/entities/project.entity';
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
@@ -23,4 +24,7 @@ export class Comment {
 
   @ManyToOne(() => Project, (project) => project.comments)
   project: Project;
+
+  @ManyToOne(() => Blog, (blog) => blog.comments)
+  blog: Blog;
 }
