@@ -1,5 +1,12 @@
+import { Blog } from 'src/blog/entities/blog.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
 
 @Entity('projects')
 export class Project {
@@ -43,4 +50,7 @@ export class Project {
 
   @ManyToOne(() => Organization, (organization) => organization.projects)
   organization: Organization;
+
+  @OneToMany(() => Blog, (blog) => blog.project)
+  blogs: Blog[];
 }
