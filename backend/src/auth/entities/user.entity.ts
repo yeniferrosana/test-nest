@@ -10,6 +10,12 @@ import {
   OneToMany,
 } from 'typeorm';
 
+export enum Role {
+  USER = 'user',
+  ADMIN = 'admin',
+  SUPER = 'superadmin',
+}
+
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn('uuid')
@@ -42,10 +48,15 @@ export class User {
     nullable: false,
   })
   password: string;
-  
-   @Column('text', {
+
+  @Column('bool', {
+    default: true,
+  })
+  isActive: boolean;
+
+  @Column('text', {
     array: true,
-    default: ['user'],
+    default: [Role.USER],
   })
   roles: string[];
 
