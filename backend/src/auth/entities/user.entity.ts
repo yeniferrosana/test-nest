@@ -1,6 +1,8 @@
 import { Documentation } from 'src/documentation/entities/documentation.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
 import {
+  BeforeInsert,
+  BeforeUpdate,
   Entity,
   Column,
   PrimaryGeneratedColumn,
@@ -40,11 +42,22 @@ export class User {
     nullable: false,
   })
   password: string;
-
-  @Column('bool', {
-    default: false,
+  
+   @Column('text', {
+    array: true,
+    default: ['user'],
   })
-  isAdmin: boolean;
+  roles: string[];
+
+  @BeforeInsert()
+  checkFieldsBeforeInsert() {
+    this.email = this.email.toLowerCase().trim();
+  }
+
+  @BeforeUpdate()
+  checkFieldsBeforeUpdate() {
+    this.checkFieldsBeforeInsert();
+  }
 
   @OneToOne(() => Documentation, (documentation) => documentation.admin) // specify inverse side as a second parameter
   documentation: Documentation;
