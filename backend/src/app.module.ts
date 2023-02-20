@@ -7,6 +7,14 @@ import { AppService } from './app.service';
 import { EnvConfiguration } from './config/app.config';
 import { JoiValidationSchema } from './config/joi.validation';
 import { AuthModule } from './auth/auth.module';
+import { OrganizationModule } from './organization/organization.module';
+import { DocumentationModule } from './documentation/documentation.module';
+import { ProjectModule } from './project/project.module';
+import { BlogModule } from './blog/blog.module';
+import { BankAccountModule } from './bank-account/bank-account.module';
+import { PaymentLinkModule } from './payment-link/payment-link.module';
+import { CommentModule } from './comment/comment.module';
+import { DonationModule } from './donation/donation.module';
 
 @Module({
   imports: [
@@ -25,6 +33,14 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true,
     }),
     AuthModule,
+    OrganizationModule,
+    DocumentationModule,
+    ProjectModule,
+    BlogModule,
+    BankAccountModule,
+    PaymentLinkModule,
+    CommentModule,
+    DonationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
