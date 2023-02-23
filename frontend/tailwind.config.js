@@ -11,6 +11,7 @@ module.exports = {
         "primary-color": "#353531",
         "primary-color-100": "#60D394",
         "primary-color-200": "#FFC759",
+        "primary-color-250": "rgba(255, 199, 89, 0.05)",
         "primary-color-300": "#FFC759bf",
         "secondary-color": "#EDF7F6",
         "secondary-color-100": "#CFDBD5",
