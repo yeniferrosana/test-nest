@@ -6,7 +6,6 @@ import {
   Param,
   Query,
   Patch,
-  ParseUUIDPipe,
 } from '@nestjs/common';
 import { GetUser } from 'src/auth/decorators';
 import { Auth } from 'src/auth/decorators/auth.decorator';

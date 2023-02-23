@@ -83,25 +83,11 @@ export class OrganizationService {
       }
 
       const toUpdate = { ...updateOrganizationDto };
-      //console.log(!user.roles.includes('admin'));
-      console.log(toUpdate);
-      console.log(organization.registered);
-
-      // Verificar que solo usuarios con rol admin puedan modificar el registered
-      // if (
-      //   !user.roles.includes('admin') &&
-      //   organization.registered !== undefined
-      // ) {
-      //   throw new ForbiddenException(
-      //     `Usuario no autorizado para actualizar este campo: 'registered'`,
-      //   );
-      // }
 
       if (
         !user.roles.includes('admin') &&
         updateOrganizationDto.registered !== undefined
       ) {
-        console.log('hola');
         throw new ForbiddenException(
           `Usuario no autorizado para actualizar este campo: 'registered'`,
         );
