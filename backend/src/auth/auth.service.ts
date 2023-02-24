@@ -64,8 +64,9 @@ export class AuthService {
     if (!bcrypt.compareSync(password, user.password))
       throw new UnauthorizedException('Credenciales no válidas (password)');
 
+    const { password: pass, ...userResponse } = user;
     return {
-      ...user,
+      ...userResponse,
       token: this.getJwtToken({ id: user.id }),
     };
   }
