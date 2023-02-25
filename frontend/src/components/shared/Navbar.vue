@@ -15,7 +15,7 @@ export default {
 
 <template>
   <header class="bg-center bg-cover bg-secondary-color">
-    <div class="container px-6 mx-auto max-w-6xl">
+    <div class="container mx-auto max-w-6xl">
       <nav class="relative bg-transparent">
         <div
           class="container py-4 mx-auto md:flex md:justify-between md:items-center"
@@ -23,7 +23,9 @@ export default {
           <div class="flex items-center justify-between">
             <Logo />
             <!-- Mobile menu button -->
-            <div class="flex lg:hidden md:hidden xl:hidden 2xl:hidden z-10">
+            <div
+              class="flex mr-5 lg:hidden md:hidden xl:hidden 2xl:hidden z-10"
+            >
               <button
                 @click="isOpen = !isOpen"
                 type="button"
@@ -72,7 +74,7 @@ export default {
                 ? 'translate-x-0 opacity-100 '
                 : 'opacity-0 -translate-x-full',
             ]"
-            class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center"
+            class="absolute bg-secondary-color inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center"
           >
             <div class="flex font-montserrat flex-col md:flex-row">
               <a
