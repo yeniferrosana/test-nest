@@ -1,21 +1,24 @@
 import axios from "axios";
 
-const URL_BASE_API = "http://localhost:5173/frontend";
+const URL_BASE_API = import.meta.env.VITE_URL_BASE_API;
 
-export const ApiRequest = axios.create({
+const ApiRequest = axios.create({
   baseURL: URL_BASE_API,
   headers: {
     "Content-Type": "application/json",
-    Authorization: import.meta.env.VITE_API_KEY,
+    Authorization: "",
   },
 });
 
-// const validResponseFormat = /[2]\d\d/;
-
-// ApiRequest.interceptors.response.use((response, error) => {
-//   if (!validResponseFormat.test(response.status)) {
-//     return Promise.reject(error);
-//   } else {
-//     return response.data;
-//   }
-// });
+ApiRequest.interceptors.request.use(
+  function (config) {
+    if (config.url.includes("auth")) return config;
+    const token = "test"; // get from pinia or cookies
+    config.headers["Authorization"] = "Bearer " + token;
+    return config;
+  },
+  function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  }
+);
