@@ -40,5 +40,5 @@ export class Organization {
   owner: User;
 
   @OneToMany(() => Project, (project) => project.organization)
-  projects: Project[];
+  projects?: Project[];
 }

@@ -41,4 +41,14 @@ export class CreateProjectDto {
   @IsNumber()
   @ApiProperty()
   accumulated: number;
+
+  @IsString()
+  @IsNotEmpty()
+  @ApiProperty()
+  ownerType: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @ApiProperty()
+  ownerId: string;
 }

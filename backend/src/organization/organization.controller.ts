@@ -26,17 +26,17 @@ export class OrganizationController {
   ) {
     return this.organizationService.create(createOrganizationDto, user);
   }
-
+  //Obtener todas las organizaciones, pueden filtrarsen si están registradas o no, poniendo el registered como true o false
   @Get()
   @Auth(ValidRoles.admin)
   findAll(@Query('registered') registered: boolean) {
     return this.organizationService.findAll(registered);
   }
 
+  //Obtener una organización en partícular
   @Get(':id')
   @Auth(ValidRoles.admin)
   findOne(@Param('id') id: string) {
-    console.log('ss');
     return this.organizationService.findOne(id);
   }
 

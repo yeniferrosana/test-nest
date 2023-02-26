@@ -1,3 +1,4 @@
+import { User } from 'src/auth/entities/user.entity';
 import { BankAccount } from 'src/bank-account/entities/bank-account.entity';
 import { Blog } from 'src/blog/entities/blog.entity';
 import { Comment } from 'src/comment/entities/comment.entity';
@@ -52,8 +53,18 @@ export class Project {
   })
   created_at: Date;
 
+  //Prueba
+  @Column({ nullable: true })
+  userId: string;
+
+  @Column({ nullable: true })
+  organizationId: string;
+
   @ManyToOne(() => Organization, (organization) => organization.projects)
   organization: Organization;
+
+  @ManyToOne(() => User, (user) => user.projects)
+  user: User;
 
   @OneToMany(() => Blog, (blog) => blog.project)
   blogs: Blog[];
