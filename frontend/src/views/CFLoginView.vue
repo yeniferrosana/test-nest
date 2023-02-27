@@ -11,10 +11,11 @@ import CFLoginForm from "../components/Forms/CFLoginForm.vue";
 </style>
 <template>
 <div class="pattern bg-center bg-cover -mt-24">
-  <div class="container mx-auto flex max-w-6xl items-center justify-center flex-col">
+  <div class="container mx-auto flex max-w-6xl  items-center md:items-end justify-center flex-col mb-24">
     <div class="w-11/12 sm:w-2/4 top-1/4 my-4 sm:left-1/4 h-[36rem]">
-      
-      <!--<CFLoginForm />-->
+      <div class="w-full lg:w-1/2 mt-[18rem]">
+        <CFLoginForm />
+      </div>
     </div>
   </div>
 </div>
