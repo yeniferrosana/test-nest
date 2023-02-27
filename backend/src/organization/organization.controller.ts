@@ -14,7 +14,9 @@ import { CreateOrganizationDto } from './dto/create-organization.dto';
 import { OrganizationService } from './organization.service';
 import { ValidRoles } from '../auth/interfaces/valid-roles.interface';
 import { UpdateOrganizationDto } from './dto/update-organization.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Organization')
 @Controller('organization')
 export class OrganizationController {
   constructor(private readonly organizationService: OrganizationService) {}

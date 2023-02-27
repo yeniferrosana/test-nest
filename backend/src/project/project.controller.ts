@@ -1,10 +1,12 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/decorators';
 import { Auth } from 'src/auth/decorators/auth.decorator';
 import { User } from 'src/auth/entities/user.entity';
 import { CreateProjectDto } from './dto/create-project.dto';
 import { ProjectService } from './project.service';
 
+@ApiTags('Project')
 @Controller('project')
 export class ProjectController {
   constructor(private readonly projectService: ProjectService) {}

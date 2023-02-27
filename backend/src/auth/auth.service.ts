@@ -4,6 +4,12 @@ import {
   InternalServerErrorException,
   UnauthorizedException,
 } from '@nestjs/common';
+import {
+  ApiBadRequestResponse,
+  ApiInternalServerErrorResponse,
+  ApiOkResponse,
+  ApiUnauthorizedResponse,
+} from '@nestjs/swagger';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
@@ -21,6 +27,13 @@ export class AuthService {
     private readonly userRepository: Repository<User>,
     private readonly jwtService: JwtService,
   ) {}
+
+  @ApiBadRequestResponse({ description: 'Error al crear el usuario' })
+  @ApiInternalServerErrorResponse({ description: 'Error interno del servidor' })
+  @ApiOkResponse({
+    description: 'Usuario creado satisfactoriamente',
+    status: 201,
+  })
   async create(createUserDto: CreateUserDto) {
     try {
       const { password, ...userData } = createUserDto;
@@ -35,20 +48,16 @@ export class AuthService {
         ...user,
         token: this.getJwtToken({ id: user.id }),
       };
-      // const userFound = await this.userRepository.finOne({
-      //   where: { username: user.username },
-      // });
-      // if (userFound) {
-      //   //HttpExceptio('mensaje',numero o enum)
-      //   return new HttpException('User already exists', HttpStatus.CONFLICT);
-      // }
-      // const newUser = this.userRepository.create(user);
-      // return this.userRepository.save(newUser);
     } catch (error) {
       this.handleDBErrors(error);
     }
   }
 
+  @ApiUnauthorizedResponse({
+    description: 'Credenciales no válidas',
+    status: 401,
+  })
+  @ApiOkResponse({ description: 'Usuario autenticado satisfactoriamente' })
   async login(loginUserDto: LoginUserDto) {
     const { password, email } = loginUserDto;
 
