@@ -1,5 +1,6 @@
 import { Documentation } from 'src/documentation/entities/documentation.entity';
 import { Organization } from 'src/organization/entities/organization.entity';
+import { Project } from 'src/project/entities/project.entity';
 import {
   BeforeInsert,
   BeforeUpdate,
@@ -75,4 +76,10 @@ export class User {
 
   @OneToMany(() => Organization, (organization) => organization.owner)
   organizations: Organization[];
+
+  @OneToMany(() => Project, (project) => project.user, {
+    cascade: true,
+    eager: true,
+  })
+  projects?: Project[];
 }
