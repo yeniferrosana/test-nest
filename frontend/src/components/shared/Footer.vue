@@ -27,7 +27,7 @@ export default {
               >Proyectos</a
             >
             <a
-              href="who"
+              href="team"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
               >¿Quiénes somos?</a
             >
@@ -42,7 +42,7 @@ export default {
               >Iniciar Sesión</a
             >
             <a
-              href="contact"
+              href="team"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
               >Contacto</a
             >
