@@ -56,11 +56,16 @@ export class ProjectService {
       project.img = createProjectDto.img;
       project.goal = createProjectDto.goal;
       project.accumulated = createProjectDto.accumulated;
+      project.endDate = new Date(createProjectDto.endDate);
 
       if (ownerType !== 0) {
         project.organization = projectOwner as Organization;
       } else {
         project.user = projectOwner as User;
+      }
+
+      if (!createProjectDto.endDate) {
+        project.endDate = null;
       }
 
       return this.projectRepository.save(project);
@@ -74,8 +79,15 @@ export class ProjectService {
 
   //Obtener todos los proyectos
   async findAll() {
-    const projects = await this.projectRepository.find();
-    return projects;
+    try {
+      const projects = await this.projectRepository.find();
+      return projects;
+    } catch (error) {
+      if (error instanceof HttpException) {
+        throw error;
+      }
+      this.handleDBErrors(error);
+    }
   }
 
   async findOne(id: string) {

@@ -1,4 +1,5 @@
 import {
+  IsDateString,
   IsNotEmpty,
   IsNumber,
   IsString,
@@ -41,6 +42,11 @@ export class CreateProjectDto {
   @IsNumber()
   @ApiProperty()
   accumulated: number;
+
+  @IsDateString()
+  //@IsNotEmpty()
+  @ApiProperty()
+  endDate: string;
 
   @IsString()
   @IsNotEmpty()

@@ -53,7 +53,9 @@ export class Project {
   })
   created_at: Date;
 
-  //Prueba
+  @Column({ type: 'timestamp', nullable: true, default: null })
+  endDate: Date | null;
+
   @Column({ nullable: true })
   userId: string;
 
