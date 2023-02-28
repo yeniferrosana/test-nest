@@ -18,14 +18,13 @@ const rPassword = ref("");
 
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const areInputsValid = () => {
-  debugger;
   if (!regexEmail.test(email.value)) return false;
   if (password.value.length < 6) return false;
   if (name.value.length < 3) return false;
   if (userName.value.length < 3) return false;
   if (lastName.value.length < 2) return false;
-  if (!conditions) return false;
-  if (password.value != rPassword.value) return false;
+  if (!conditions.value) return false;
+  if (password.value !== rPassword.value) return false;
   return true;
 };
 

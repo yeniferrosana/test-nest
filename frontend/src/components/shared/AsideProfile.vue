@@ -4,14 +4,19 @@
 
     <div class="flex flex-col justify-between flex-1 mt-6">
       <nav>
-        <router-link class="flex px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100  hover:text-gray-700" to="/profile">
+        <router-link
+          class="flex px-4 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          to="/profile"
+        >
           <span class="font-medium">Mis datos</span>
         </router-link>
 
-        <router-link class="flex py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100  hover:text-gray-700" to="/donaciones">
+        <router-link
+          class="flex py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          to="/donaciones"
+        >
           <span class="mx-4 font-medium">Historial de donaciones</span>
         </router-link>
-          
       </nav>
       <a
         href="logout"
@@ -19,7 +24,7 @@
         >Cerrar Sesión</a
       >
     </div>
-</aside>
+  </aside>
 </template>
 <style scoped>
 .router-link-active {

@@ -1,13 +1,11 @@
-import { ref, computed, reactive } from "vue";
+import { reactive } from "vue";
 import { defineStore } from "pinia";
 import { getAccessToken } from "../services/auth.service";
 
 const profile = getAccessToken();
-const authProfile = profile
-  ? profile
-  : {
-      token: "",
-    };
+const authProfile = profile || {
+  token: "",
+};
 
 export const useAuthStore = defineStore("auth", () => {
   const profileAuth = reactive(authProfile);

@@ -31,51 +31,87 @@
           ¿Cómo funciona?
         </h1>
         <div class="p-8 my-4 bg-primary-color-300 rounded-lg">
-            <button class="flex items-center justify-between w-full">
-                <h1 class="font-semibold text-gray-700 ">¿Qué es Donafunding?</h1>
+          <button class="flex items-center justify-between w-full">
+            <h1 class="font-semibold text-gray-700">¿Qué es Donafunding?</h1>
 
-                <span class="text-primary-color bg-gray-200 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
-                    </svg>
-                </span>
-            </button>
+            <span class="text-primary-color bg-gray-200 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 12H6"
+                />
+              </svg>
+            </span>
+          </button>
 
-            <p class="mt-6 text-sm text-gray-500">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
-            </p>
+          <p class="mt-6 text-sm text-gray-500">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+            eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum
+            laboriosam recusandae facere dolorum veniam quia pariatur obcaecati
+            illo ducimus?
+          </p>
         </div>
 
         <div class="p-8 my-4 bg-primary-color-300 rounded-lg">
-            <button class="flex items-center justify-between w-full">
-                <h1 class="font-semibold text-gray-700">¿Cómo funciona Donafunding?</h1>
+          <button class="flex items-center justify-between w-full">
+            <h1 class="font-semibold text-gray-700">
+              ¿Cómo funciona Donafunding?
+            </h1>
 
-                <span class="text-white bg-primary-color rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                </span>
-            </button>
+            <span class="text-white bg-primary-color rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
 
         <div class="p-8 bg-primary-color-300 rounded-lg">
-            <button class="flex items-center justify-between w-full">
-                <h1 class="font-semibold text-gray-700">¿Dónde va mi inversión?</h1>
+          <button class="flex items-center justify-between w-full">
+            <h1 class="font-semibold text-gray-700">¿Dónde va mi inversión?</h1>
 
-                <span class="text-white bg-primary-color rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                </span>
-            </button>
+            <span class="text-white bg-primary-color rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>
     <section id="form" class="bg-secondary-color-100">
       <div class="container px-5 py-24 mx-auto max-w-6xl">
-        <h1
-          class="text-2xl font-bold text-primary-color text-center"
-        >
+        <h1 class="text-2xl font-bold text-primary-color text-center">
           Si tienes más dudas, contactanos
         </h1>
         <SampleForm />
@@ -90,14 +126,14 @@
         </div>
       </div>
     </section>
-  </main>        
+  </main>
 </template>
 <script>
-  import SampleForm from '../components/shared/SampleForm.vue'
+import SampleForm from "../components/shared/SampleForm.vue";
 
-  export default {
-    components: {
-      SampleForm,
-    }
-  }
+export default {
+  components: {
+    SampleForm,
+  },
+};
 </script>
