@@ -1,10 +1,10 @@
 import Cookies from "js-cookie";
 import { ApiRequest } from "@/services/index";
 
-const login = (user, pass) => {
+const login = (email, password) => {
   return ApiRequest.post("/auth/login", {
-    email: user,
-    password: pass,
+    email,
+    password,
   });
 };
 
@@ -28,7 +28,6 @@ const logout = () => {
 
 const inFifteenMinutes = new Date(new Date().getTime() + 15 * 60 * 1000);
 const setAccessToken = (userLogged) => {
-  console.log(userLogged);
   Cookies.set("userLogged", JSON.stringify(userLogged), {
     expires: inFifteenMinutes,
   });

@@ -21,30 +21,30 @@ export default {
           <div
             class="flex flex-col lg:items-start sm:items-start items-center mt-5"
           >
-            <a
-              href="projects"
+            <RouterLink
+              to="/projects"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
-              >Proyectos</a
+              >Proyectos</RouterLink
             >
-            <a
-              href="team"
+            <RouterLink
+              to="/team"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
-              >¿Quiénes somos?</a
+              >¿Quiénes somos?</RouterLink
             >
-            <a
-              href="help"
+            <RouterLink
+              to="/help"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
-              >Ayuda</a
+              >Ayuda</RouterLink
             >
-            <a
-              href="login"
+            <RouterLink
+              to="/login"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
-              >Iniciar Sesión</a
+              >Iniciar Sesión</RouterLink
             >
-            <a
-              href="team"
+            <RouterLink
+              to="team"
               class="my-2 text-neutral transition-colors duration-300 transform hover:text-secondary-color md:mx-4 md:my-2"
-              >Contacto</a
+              >Contacto</RouterLink
             >
           </div>
           <div
