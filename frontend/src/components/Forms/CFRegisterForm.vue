@@ -16,6 +16,7 @@ const conditions = ref(false);
 const password = ref("");
 const rPassword = ref("");
 
+/*eslint no-useless-escape: "error"*/
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const areInputsValid = () => {
   if (!regexEmail.test(email.value)) return false;
