@@ -36,9 +36,9 @@ export class Organization {
   @JoinColumn()
   documentation: Documentation;
 
-  @ManyToOne(() => User, (user) => user.organizations)
+  @ManyToOne(() => User, (user) => user.organizations, { eager: true })
   owner: User;
 
   @OneToMany(() => Project, (project) => project.organization)
-  projects: Project[];
+  projects?: Project[];
 }
