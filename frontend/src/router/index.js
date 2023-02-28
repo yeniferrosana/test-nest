@@ -28,9 +28,34 @@ const router = createRouter({
       component: () => import("../views/CFProjectsView.vue"),
     },
     {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/CFLoginView.vue"),
+    },
+    {
+      path: "/how",
+      name: "how",
+      component: () => import("../views/CFHowWorks.vue"),
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: () => import("../views/CFRegisterView.vue"),
+    },
+    {
       path: "/team",
       name: "team",
       component: () => import("../views/CFTeamView.vue"),
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: () => import("../views/CFProfileView.vue"),
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "PageNotFound",
+      component: () => import("../views/CFNotFound.vue"),
     },
   ],
 });

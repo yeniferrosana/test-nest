@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="bg-primary-color-250 rounded-lg flex items-center max-w-[421px] min-w-[421px] h-[100px] p-6"
-  >
+  <div class="bg-primary-color-250 rounded-lg flex items-center h-[100px] p-6">
     <div class="w-20 h-20 rounded-full bg-primary-color">
       <img class="block max-w-full" :src="photo" alt="" srcset="" />
     </div>
