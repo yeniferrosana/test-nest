@@ -22,3 +22,5 @@ ApiRequest.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+export { ApiRequest };

@@ -77,25 +77,25 @@ export default {
             class="absolute bg-secondary-color inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center"
           >
             <div class="flex font-montserrat flex-col md:flex-row">
-              <a
+              <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-color-100 md:mx-4 md:my-2"
-                href="projects"
-                >Proyectos</a
+                to="projects"
+                >Proyectos</RouterLink
               >
-              <a
+              <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-color-100 md:mx-4 md:my-2"
-                href="how"
-                >Cómo funciona</a
+                to="how"
+                >Cómo funciona</RouterLink
               >
-              <a
+              <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:bg-primary-color-100 hover:py-2 hover:px-4 hover:mx-0 hover:my-0 hover:rounded-3xl md:mx-4 md:my-2"
-                href="login"
-                >Iniciar Sesión</a
+                to="login"
+                >Iniciar Sesión</RouterLink
               >
-              <a
+              <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:bg-secondary-color hover:py-2 hover:px-4 hover:mx-0 hover:my-0 hover:rounded-3xl md:mx-4 md:my-2"
-                href="register"
-                >Crear cuenta</a
+                to="register"
+                >Crear cuenta</RouterLink
               >
             </div>
           </div>
