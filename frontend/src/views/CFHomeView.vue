@@ -44,15 +44,15 @@ export default {
               <div
                 class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row"
               >
-                <a
-                  href="login"
+                <RouterLink
+                  to="login"
                   class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-primary-color transition-colors duration-300 transform bg-primary-color-100 rounded-3xl hover:bg-secondary-color"
-                  >Iniciar Sesión</a
+                  >Iniciar Sesión</RouterLink
                 >
-                <a
-                  href="register"
+                <RouterLink
+                  to="register"
                   class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-primary-color transition-colors duration-300 transform bg-secondary-color rounded-3xl lg:mx-4 hover:bg-white"
-                  >Crear Cuenta</a
+                  >Crear Cuenta</RouterLink
                 >
               </div>
             </div>
