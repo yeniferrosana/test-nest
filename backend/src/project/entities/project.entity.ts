@@ -1,3 +1,4 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { User } from 'src/auth/entities/user.entity';
 import { BankAccount } from 'src/bank-account/entities/bank-account.entity';
 import { Blog } from 'src/blog/entities/blog.entity';
@@ -15,34 +16,63 @@ import {
 
 @Entity('projects')
 export class Project {
+  @ApiProperty({
+    example: 'cd533345-f1f3-48c9-a62e-7dc2da50c8f8',
+    description: 'ID del proyecto',
+    uniqueItems: true,
+  })
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @ApiProperty({
+    example: 'Mi proyecto',
+    description: 'Nombre del proyecto',
+  })
   @Column('text', {
     nullable: false,
   })
   name: string;
 
+  @ApiProperty({
+    example: 'Resumen del proyecto',
+    description: 'Resumen del proyecto',
+  })
   @Column('text', {
     nullable: false,
   })
   resume: string;
 
+  @ApiProperty({
+    example: 'Descripción del proyecto',
+    description: 'Descripción del proyecto',
+  })
   @Column('text', {
     nullable: false,
   })
   description: string;
 
+  @ApiProperty({
+    example: 'https://ejemplo.com/imagen.jpg',
+    description: 'URL de la imagen del proyecto',
+  })
   @Column('text', {
     nullable: false,
   })
   img: string;
 
+  @ApiProperty({
+    example: 50000,
+    description: 'Objetivo de financiamiento del proyecto',
+  })
   @Column('float', {
     nullable: false,
   })
   goal: number;
 
+  @ApiProperty({
+    example: 25000,
+    description: 'Monto acumulado del financiamiento del proyecto',
+  })
   @Column('float', {
     default: 0,
   })
