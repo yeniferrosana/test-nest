@@ -18,7 +18,7 @@ export const getProject = async (id) => {
 
 export const createProject = async (project) => {
   try {
-    return await ApiRequest.post("/project/register");
+    return await ApiRequest.post("/project/register", {});
   } catch (error) {
     return {};
   }
