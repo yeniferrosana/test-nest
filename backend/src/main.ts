@@ -17,6 +17,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Crowdfunding API')
+    .addBearerAuth()
     .setDescription('Crowdfunding endpoints')
     .setVersion('1.0')
     .build();
