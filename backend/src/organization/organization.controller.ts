@@ -14,36 +14,61 @@ import { CreateOrganizationDto } from './dto/create-organization.dto';
 import { OrganizationService } from './organization.service';
 import { ValidRoles } from '../auth/interfaces/valid-roles.interface';
 import { UpdateOrganizationDto } from './dto/update-organization.dto';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiTags, ApiResponse } from '@nestjs/swagger';
 
-@ApiTags('Organization')
+@ApiTags('Organización')
 @Controller('organization')
 export class OrganizationController {
   constructor(private readonly organizationService: OrganizationService) {}
+
   @Post('register')
   @Auth()
+  @ApiResponse({
+    status: 201,
+    description: 'Se ha registrado la organización.',
+  })
   create(
     @Body() createOrganizationDto: CreateOrganizationDto,
     @GetUser() user: User,
   ) {
     return this.organizationService.create(createOrganizationDto, user);
   }
-  //Obtener todas las organizaciones, pueden filtrarsen si están registradas o no, poniendo el registered como true o false
+
   @Get()
   @Auth(ValidRoles.admin)
-  findAll(@Query('registered') registered: boolean) {
-    return this.organizationService.findAll(registered);
+  @ApiResponse({
+    status: 200,
+    description: 'Se han obtenido todas las organizaciones.',
+  })
+  findAll(@Query('registrado') registrado: boolean) {
+    return this.organizationService.findAll(registrado);
   }
 
-  //Obtener una organización en partícular
   @Get(':id')
   @Auth(ValidRoles.admin)
+  @ApiResponse({ status: 200, description: 'Se ha obtenido la organización.' })
+  @ApiResponse({
+    status: 404,
+    description: 'No se ha encontrado la organización.',
+  })
   findOne(@Param('id') id: string) {
     return this.organizationService.findOne(id);
   }
 
   @Patch(':id')
   @Auth()
+  @ApiResponse({
+    status: 200,
+    description: 'Se ha actualizado la organización.',
+  })
+  @ApiResponse({
+    status: 403,
+    description: 'No tienes permiso para actualizar esta organización.',
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'No se ha encontrado la organización.',
+  })
   update(
     @Param('id') id: string,
     @Body() updateOrganizationDto: UpdateOrganizationDto,

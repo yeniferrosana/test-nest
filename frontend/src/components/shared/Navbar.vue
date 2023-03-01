@@ -79,22 +79,22 @@ export default {
             <div class="flex font-montserrat flex-col md:flex-row">
               <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-color-100 md:mx-4 md:my-2"
-                to="projects"
+                to="/projects"
                 >Proyectos</RouterLink
               >
               <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:text-primary-color-100 md:mx-4 md:my-2"
-                to="how"
+                to="/how"
                 >Cómo funciona</RouterLink
               >
               <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:bg-primary-color-100 hover:py-2 hover:px-4 hover:mx-0 hover:my-0 hover:rounded-3xl md:mx-4 md:my-2"
-                to="login"
+                to="/login"
                 >Iniciar Sesión</RouterLink
               >
               <RouterLink
                 class="my-2 text-neutral transition-colors duration-300 transform hover:bg-secondary-color hover:py-2 hover:px-4 hover:mx-0 hover:my-0 hover:rounded-3xl md:mx-4 md:my-2"
-                to="register"
+                to="/register"
                 >Crear cuenta</RouterLink
               >
             </div>

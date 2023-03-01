@@ -4,12 +4,6 @@ import {
   InternalServerErrorException,
   UnauthorizedException,
 } from '@nestjs/common';
-import {
-  ApiBadRequestResponse,
-  ApiInternalServerErrorResponse,
-  ApiOkResponse,
-  ApiUnauthorizedResponse,
-} from '@nestjs/swagger';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
@@ -28,12 +22,6 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  @ApiBadRequestResponse({ description: 'Error al crear el usuario' })
-  @ApiInternalServerErrorResponse({ description: 'Error interno del servidor' })
-  @ApiOkResponse({
-    description: 'Usuario creado satisfactoriamente',
-    status: 201,
-  })
   async create(createUserDto: CreateUserDto) {
     try {
       const { password, ...userData } = createUserDto;
@@ -53,11 +41,6 @@ export class AuthService {
     }
   }
 
-  @ApiUnauthorizedResponse({
-    description: 'Credenciales no válidas',
-    status: 401,
-  })
-  @ApiOkResponse({ description: 'Usuario autenticado satisfactoriamente' })
   async login(loginUserDto: LoginUserDto) {
     const { password, email } = loginUserDto;
 

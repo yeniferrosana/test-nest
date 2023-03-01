@@ -2,6 +2,7 @@ import Cookies from "js-cookie";
 import { ApiRequest } from "@/services/index";
 
 const login = (email, password) => {
+  console.log(email, password);
   return ApiRequest.post("/auth/login", {
     email,
     password,

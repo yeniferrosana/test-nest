@@ -18,15 +18,16 @@ const router = createRouter({
       component: () => import("../views/CFAboutView.vue"),
     },
     {
-      path: "/detail",
-      name: "detail",
-      component: () => import("../views/CFDetailView.vue"),
-    },
-    {
       path: "/projects",
       name: "projects",
       component: () => import("../views/CFProjectsView.vue"),
     },
+    {
+      path: "/projects/:id",
+      name: "detail",
+      component: () => import("../views/CFDetailView.vue"),
+    },
+
     {
       path: "/login",
       name: "login",
