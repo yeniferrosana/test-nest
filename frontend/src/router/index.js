@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import("../views/CFProjectsView.vue"),
     },
     {
+      path: "/add-projects",
+      name: "add-projects",
+      component: () => import("../views/CFAddProjectsView.vue"),
+    },
+    {
       path: "/projects/:id",
       name: "detail",
       component: () => import("../views/CFDetailView.vue"),
@@ -52,6 +57,11 @@ const router = createRouter({
       path: "/profile",
       name: "profile",
       component: () => import("../views/CFProfileView.vue"),
+    },
+    {
+      path: "/history",
+      name: "history",
+      component: () => import("../views/CFHistoryView.vue"),
     },
     {
       path: "/:pathMatch(.*)*",

@@ -130,8 +130,7 @@ export default {
       </div>
     </section>
     <section id="projects">
-      <div class="my-5">
-        <div class="max-w-7xl m-auto flex flex-wrap gap-5">
+      <div class="max-w-7xl mx-auto mt-12 flex flex-wrap justify-center gap-5">
           <CFProjectCard>
             <template v-slot:img>
               <img :src="json[1].image" alt="" />
@@ -240,7 +239,6 @@ export default {
               </div>
             </template>
           </CFProjectCard>
-        </div>
       </div>
       <div class="w-full text-center mb-12">
         <router-link to="projects">
