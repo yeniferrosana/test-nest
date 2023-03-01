@@ -1,7 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ApiResponse } from '@nestjs/swagger';
 import { DonationService } from './donation.service';
-import { createDonation } from './dto/createDonation.dto';
+import { CreateDonation } from './dto/createDonation.dto';
 import { PaymentData } from './dto/paymentData.dto';
 import { MercadoPagoService } from './mercadoPago.service';
 
@@ -18,7 +18,7 @@ export class DonationController {
     return { initPoint };
   }
 
-  @Post('register')
+  @Post('new')
   @ApiResponse({
     status: 201,
     description: 'Donación registrada exitosamente',
@@ -28,7 +28,7 @@ export class DonationController {
     description: 'Error al registrar donación',
   })
   @ApiResponse({ status: 500, description: 'Error interno del servidor.' })
-  create(@Body() createDonation: createDonation) {
+  create(@Body() createDonation: CreateDonation) {
     return this.donationService.create(createDonation);
   }
 }

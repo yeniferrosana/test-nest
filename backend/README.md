@@ -57,8 +57,23 @@ Una ves que el donante termine la transacción, mercado pago lo deriva automáti
 
 Una ves verificado esto debemos enviar los datos almacenados en local storage en una petición POST
 
+A la URL:
+```javascript
+  http://localhost:3000/api/donation/new
+```
+con el body: 
+```JSON
+{
+	"amount": 300,
+  "name": "Nombre",
+	"projectId": "a322c363-1898-4b98-8827-ef035b0d8fa0"
+}
+```
+
+Una vez realizada esa petición la api va a generar una nueva donación, la vinculará al proyecto e incrementará el total recaudado en el mismo
 
 
+# Información 
 Cuentas de Mercado Pago para Pruebas
 ```
 Identificación de cuenta: TEST_USER_1313855305 Usuario Contraseña: uQwpuTttut Public Key: APP_USR-39f42a1c-072a-45e5-95e2-a0ef3bd7b622 Access Token: APP_USR-4410140070420770-021915-9a67e31ccdd7e46c81e6967f03a2eedf-1313855305

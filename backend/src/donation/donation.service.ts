@@ -6,7 +6,7 @@ import {
 import { InjectRepository } from '@nestjs/typeorm';
 import { Project } from 'src/project/entities/project.entity';
 import { Repository } from 'typeorm';
-import { createDonation } from './dto/createDonation.dto';
+import { CreateDonation } from './dto/createDonation.dto';
 import { Donation } from './entities/donation.entity';
 
 @Injectable()
@@ -14,17 +14,18 @@ export class DonationService {
   constructor(
     @InjectRepository(Donation)
     private readonly donationRepository: Repository<Donation>,
+    @InjectRepository(Project)
     private readonly projectRepository: Repository<Project>,
   ) {}
 
-  async create(createDonation: createDonation) {
+  async create(createDonation: CreateDonation) {
     try {
       const { user, amount, projectId } = createDonation;
       let user_name: string;
 
-      user ? (user_name = user) : (user_name = 'Usuario Anónimo');
-
       const project = await this.projectRepository.findOneBy({ id: projectId });
+
+      user ? (user_name = user) : (user_name = 'Usuario Anónimo');
 
       const donation = this.donationRepository.create({
         status: 'finished',
@@ -34,6 +35,10 @@ export class DonationService {
       });
 
       donation.project = project;
+
+      await this.projectRepository.update(project.id, {
+        accumulated: project.accumulated + amount,
+      });
 
       await this.donationRepository.save(donation);
 

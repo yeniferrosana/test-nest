@@ -1,12 +1,11 @@
-import { IsNotEmpty, IsNumber, IsString, IsUUID } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsUUID } from 'class-validator';
 
-export class createDonation {
+export class CreateDonation {
   @IsNotEmpty()
   @IsNumber()
   amount: number;
 
-  @IsString()
-  user: string;
+  user?: string;
 
   @IsNotEmpty()
   @IsUUID()
