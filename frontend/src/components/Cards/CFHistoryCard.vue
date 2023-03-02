@@ -1,7 +1,7 @@
 <script setup>
 import CFBaseButton from "../Buttons/CFBaseButton.vue";
 import CFText from "../Text/CFText.vue";
-//import CFProgressBar from "../shared/ProgressBar.vue";
+// import CFProgressBar from "../shared/ProgressBar.vue";
 </script>
 <template>
   <div class="p-4 flex flex-wrap md:flex-nowrap bg-white shadow-lg rounded-lg">

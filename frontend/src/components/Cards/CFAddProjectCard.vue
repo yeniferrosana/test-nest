@@ -1,10 +1,10 @@
 <script setup>
 import CFBaseButton from "../Buttons/CFBaseButton.vue";
-//import CFText from "../Text/CFText.vue";
+// import CFText from "../Text/CFText.vue";
 
-import { useRoute } from "vue-router";
+//import { useRoute } from "vue-router";
 
-//const route = useRoute();
+// const route = useRoute();
 </script>
 <template>
   <div
