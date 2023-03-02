@@ -131,114 +131,105 @@ export default {
     </section>
     <section id="projects">
       <div class="max-w-7xl mx-auto mt-12 flex flex-wrap justify-center gap-5">
-          <CFProjectCard>
-            <template v-slot:img>
-              <img :src="json[1].image" alt="" />
-            </template>
-            <template v-slot:title>
-              <h2>{{ json[0].title }}</h2>
-            </template>
-            <template v-slot:subtitle>
-              <h3>
-                {{
-                  json[0].type === "inversion"
-                    ? "Invertí y recibí intereses"
-                    : "Doná y ayuda con la causa"
-                }}
-              </h3>
-            </template>
-            <template v-slot:description>
-              <p>{{ json[0].description }}</p>
-            </template>
-            <template v-slot:footer>
-              <ProgressBar
-                :limit="json[0].meta"
-                :progress="json[0].collected"
-              />
-              <div class="absolute bottom-5">
-                <CFBaseButton
-                  class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Donar
-                </CFBaseButton>
-                <CFBaseButton
-                  class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Ver más
-                </CFBaseButton>
-              </div>
-            </template>
-          </CFProjectCard>
-          <CFProjectCard>
-            <template v-slot:img>
-              <img :src="json[1].image" alt="" />
-            </template>
-            <template v-slot:title>
-              <h2>{{ json[0].title }}</h2>
-            </template>
-            <template v-slot:subtitle>
-              <h3>
-                {{
-                  json[0].type === "inversion"
-                    ? "Invertí y recibí intereses"
-                    : "Doná y ayuda con la causa"
-                }}
-              </h3>
-            </template>
-            <template v-slot:description>
-              <p>{{ json[0].description }}</p>
-            </template>
-            <template v-slot:footer>
-              <ProgressBar
-                :limit="json[0].meta"
-                :progress="json[0].collected"
-              />
-              <div class="absolute bottom-5">
-                <CFBaseButton
-                  class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Donar
-                </CFBaseButton>
-                <CFBaseButton
-                  class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Ver más
-                </CFBaseButton>
-              </div>
-            </template>
-          </CFProjectCard>
-          <CFProjectCard>
-            <template v-slot:img>
-              <img :src="json[1].image" alt="" />
-            </template>
-            <template v-slot:title>
-              <h2>{{ json[0].title }}</h2>
-            </template>
-            <template v-slot:subtitle>
-              <h3>
-                {{
-                  json[0].type === "inversion"
-                    ? "Invertí y recibí intereses"
-                    : "Doná y ayuda con la causa"
-                }}
-              </h3>
-            </template>
-            <template v-slot:description>
-              <p>{{ json[0].description }}</p>
-            </template>
-            <template v-slot:footer>
-              <ProgressBar
-                :limit="json[0].meta"
-                :progress="json[0].collected"
-              />
-              <div class="absolute bottom-5">
-                <CFBaseButton
-                  class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Donar
-                </CFBaseButton>
-                <CFBaseButton
-                  class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
-                  >Ver más
-                </CFBaseButton>
-              </div>
-            </template>
-          </CFProjectCard>
+        <CFProjectCard>
+          <template v-slot:img>
+            <img :src="json[1].image" alt="" />
+          </template>
+          <template v-slot:title>
+            <h2>{{ json[0].title }}</h2>
+          </template>
+          <template v-slot:subtitle>
+            <h3>
+              {{
+                json[0].type === "inversion"
+                  ? "Invertí y recibí intereses"
+                  : "Doná y ayuda con la causa"
+              }}
+            </h3>
+          </template>
+          <template v-slot:description>
+            <p>{{ json[0].description }}</p>
+          </template>
+          <template v-slot:footer>
+            <ProgressBar :limit="json[0].meta" :progress="json[0].collected" />
+            <div class="absolute bottom-5">
+              <CFBaseButton
+                class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Donar
+              </CFBaseButton>
+              <CFBaseButton
+                class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Ver más
+              </CFBaseButton>
+            </div>
+          </template>
+        </CFProjectCard>
+        <CFProjectCard>
+          <template v-slot:img>
+            <img :src="json[1].image" alt="" />
+          </template>
+          <template v-slot:title>
+            <h2>{{ json[0].title }}</h2>
+          </template>
+          <template v-slot:subtitle>
+            <h3>
+              {{
+                json[0].type === "inversion"
+                  ? "Invertí y recibí intereses"
+                  : "Doná y ayuda con la causa"
+              }}
+            </h3>
+          </template>
+          <template v-slot:description>
+            <p>{{ json[0].description }}</p>
+          </template>
+          <template v-slot:footer>
+            <ProgressBar :limit="json[0].meta" :progress="json[0].collected" />
+            <div class="absolute bottom-5">
+              <CFBaseButton
+                class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Donar
+              </CFBaseButton>
+              <CFBaseButton
+                class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Ver más
+              </CFBaseButton>
+            </div>
+          </template>
+        </CFProjectCard>
+        <CFProjectCard>
+          <template v-slot:img>
+            <img :src="json[1].image" alt="" />
+          </template>
+          <template v-slot:title>
+            <h2>{{ json[0].title }}</h2>
+          </template>
+          <template v-slot:subtitle>
+            <h3>
+              {{
+                json[0].type === "inversion"
+                  ? "Invertí y recibí intereses"
+                  : "Doná y ayuda con la causa"
+              }}
+            </h3>
+          </template>
+          <template v-slot:description>
+            <p>{{ json[0].description }}</p>
+          </template>
+          <template v-slot:footer>
+            <ProgressBar :limit="json[0].meta" :progress="json[0].collected" />
+            <div class="absolute bottom-5">
+              <CFBaseButton
+                class="bg-secondary-color-500 mr-3 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Donar
+              </CFBaseButton>
+              <CFBaseButton
+                class="border border-gray-500 px-3 py-1 rounded-3xl font-bold text-base m-auto"
+                >Ver más
+              </CFBaseButton>
+            </div>
+          </template>
+        </CFProjectCard>
       </div>
       <div class="w-full text-center mb-12">
         <router-link to="projects">
