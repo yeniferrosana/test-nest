@@ -65,6 +65,7 @@ export class CreateProjectDto {
   accumulated = 0;
 
   @IsDateString()
+  @IsOptional()
   @ApiProperty({
     example: '2023-08-31T23:59:59Z',
     description: 'Fecha de finalización del proyecto en formato ISO 8601',
