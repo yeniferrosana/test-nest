@@ -31,6 +31,7 @@
         </template>
         <template v-slot:footer>
           <CFBaseButton
+            @click="router.push('/add-projects')"
             class="bg-secondary-color-500 absolute bottom-5 px-3 py-1 rounded-3xl font-medium text-lg"
             >Agrega tu proyecto</CFBaseButton
           >
